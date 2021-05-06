@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieTrackers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="country">Country: %s</string>
+    <string name="status">Status: %s</string>
+    <string name="Name">Show Name: %s</string>
+    <string name="MovieTitle">Title: %s</string>
+    <string name="Year">Year: %s</string>
+    <string name="filmCountry">Country: %s</string>
+    <string name="imdbRating">IMDB Rating: %s</string>
+    <string name="imdbVotes">IMDB Votes: %s</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="Error">This Page is not yet implemented</string>
+</resources>

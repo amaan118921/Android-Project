@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.movietrackers.model.TopRatedViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TopRatedFragment"
+        android:background="@color/back">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/top_rated_recycler_view"
+            tools:listitem="@layout/top_rated_item"
+            app:TMDBdata="@{viewModel.topRated}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            android:layout_marginBottom="60dp"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="25dp"
+            app:srcCompat="@drawable/next_page"
+            android:background="@color/back"
+            tools:ignore="VectorDrawableCompat"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:id="@+id/next_page"
+            android:layout_marginBottom="9dp"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/previous_page"
+            android:background="@color/back"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_marginStart="25dp"
+            android:id="@+id/previous_page"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginBottom="9dp"
+            android:importantForAccessibility="no" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
